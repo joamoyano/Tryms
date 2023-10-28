@@ -1,0 +1,309 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Lucida Console;
+    text-transform: uppercase;
+    margin-top:280px ;
+}
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    color: white;
+    background-color: brown;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+
+    width: 100%;
+    height: 100px;
+    float: left;
+    margin-bottom: 0.5%;
+    text-align: center;
+    font-family: Lucida Console;
+    text-transform: uppercase;
+
+
+
+}
+
+.Producto {
+    width: 100%;
+    background-color: rgba(80, 73, 73, 0.363);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+
+}
+
+.Papas {
+    align-self: center;
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    column-count: 3;
+    column-gap: 30px;
+
+}
+
+.Papas img {
+    width: 200px;
+    ;
+    height: 240px;
+
+}
+
+#nombreprod {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Lucida Console;
+    text-transform: uppercase;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(80, 73, 73, 0.363);
+    font-family: Lucida Console;
+    min-height: 100px;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width:100% ;
+    
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 70px;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+    margin: 3px;
+    font-size: medium;
+}
+
+nav a:hover {
+    color: whitesmoke
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgba(23, 216, 178, 0.3);
+    background: linear-gradient(0deg, rgb(76, 134, 84) 70.71%, rgb(121, 119, 119) 100%);
+}
+
+.btn-5:hover {
+    color: #000000;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1a641a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+
+body {
+    
+    background: linear-gradient(20deg,
+            rgba(23, 216, 178, 0.3),
+            rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(150deg, rgba(247, 255, 92, 0.3), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(330deg, rgba(83, 9, 71, 0.3), rgba(0, 0, 255, 0) 70.71%);
+    display: flex;
+    flex-direction: column;
+
+}
+
+body {
+    margin: 0;
+}
+
+.nav-bar {
+    min-height: 5rem;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 1.5px 5.4px rgba(0, 0, 0, 0.054),
+        0px 3.7px 10.9px rgba(0, 0, 0, 0.068), 0px 7px 16.8px rgba(0, 0, 0, 0.074),
+        0px 12.5px 24.6px rgba(0, 0, 0, 0.076),
+        0px 23.4px 38.1px rgba(0, 0, 0, 0.08), 0px 56px 80px rgba(0, 0, 0, 0.1);
+    height: 76px;
+    margin-top: 150px;
+    margin-left: 15px;
+    transition: height 400ms;
+    -webkit-tap-highlight-color: #00000010;
+    width: 240px;
+    display: block;
+    position: fixed
+
+}
+
+.card.active {
+    height: 400px;
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.row {
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: height 400ms;
+    width: 200px;
+}
+
+.icon {
+    fill: none;
+    margin-top: 0px;
+    stroke: #000;
+    stroke-width: 12;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+}
+.confirm{
+    font-family: Lucida Console;
+    text-transform: uppercase;
+    align-self: center;
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    column-count: 3;
+    column-gap: 30px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.confirm img {
+width: 70px;
+height: 70px;
+align-items:center;
+justify-content: end;
+  
+}

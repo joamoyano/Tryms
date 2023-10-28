@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="page.css">
+
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="menu-dashboard">
+            <!-- TOP MENU -->
+            <div class="top-menu">
+                <div class="logo">
+                    <span>VIKINGO FOODS</span>
+                </div>
+                <div class="toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </div>
+    
+            <!-- MENU -->
+    
+            <div class="menu">
+                <div class="enlace">
+                    <i class="bx bx-grid-alt"></i>
+                    <a href="IndexVentas.html"> <span>Dashboard</span></a>
+                </div>
+    
+                <div class="enlace">
+                    <i class="bx bx-user"></i>
+                    <a href="UsuarioVentas.html"><span>Usuario</span></a>
+                </div>
+    
+                <div class="enlace">
+                    <i class="bx bx-grid-alt"></i>
+                    <a href="AnaliticasVentas.html"><span>Analíticas</span></a>
+                </div>
+    
+                <div class="enlace">
+                    <i class="bx bx-file-blank"></i>
+                    <a href=""><span>Archivos</span></a>
+                </div>
+    
+                <div class="enlace">
+                    <i class="bx bx-cart"></i>
+                    <a href="PedidosVentas.html"><span>Pedidos</span></a>
+                </div>
+    
+                <div class="enlace">
+                    <i class="bx bx-cog"></i>
+                    <a href=""><span>Configuración</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="PagIzq">
+           <h1>USUARIO</h1>
+            
+        
+    
+        </div>
+    </div>
+    </body>
+<!--FUNCIONES-->
+
+
+
+<script>
+
+    class Pedido {
+        constructor() {
+            this.fecha,
+                this.vendedor,
+                this.producto,
+                this.nrolote,
+                this.unidades,
+                this.precio
+
+        }
+
+
+    }
+    let Notapedidos = [];
+
+    function Agregar() {
+        const fech = document.getElementById("txtFecha")
+        const vend = document.getElementById("txtVendedor")
+        const prod = document.getElementById("txtProducto")
+        const nrolot = document.getElementById("txtNroLote")
+        const uni = document.getElementById("txtCantidad")
+        const pre = document.getElementById("txtPrecio")
+
+        let ObjPedido = new Pedido();
+        ObjPedido.fecha = fech.value;
+        ObjPedido.vendedor = vend.value;
+        ObjPedido.producto = prod.value;
+        ObjPedido.nrolote = nrolot.value;
+        ObjPedido.unidades = uni.value;
+        ObjPedido.precio = pre.value;
+
+        Notapedidos.push(ObjPedido);
+
+        const td0 = document.createElement("td");
+        td0.innerHTML = fech.value;
+        const td1 = document.createElement("td");
+        td1.innerHTML = vend.value;
+        const td2 = document.createElement("td");
+        td2.innerHTML = prod.value;
+        const td3 = document.createElement("td");
+        td3.innerHTML = nrolot.value;
+        const td4 = document.createElement("td");
+        td4.innerHTML = uni.value;
+        const td5 = document.createElement("td");
+        td5.innerHTML = pre.value;
+
+        const tr = document.createElement("tr");
+        tr.appendChild(td0);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+
+        const tbody = document.querySelector("tbody");
+        tbody.appendChild(tr);
+
+        fech.value = "";
+        vend.value = "";
+        prod.value = "";
+        nrolot.value = "";
+        uni.value = "";
+        pre.value = "";
+
+        fech.focus();
+
+
+
+    }
+    function verEstadisticas() {
+        for (let i = 0; i < 5; i++) {
+            acum = Pedido.unidades + acum
+
+        }
+        const _lblCantVend = document.getElementById("lblCantVend");
+        _lblCantVend.textContent = CantTotal;
+    }
+
+
+    const toggle = document.querySelector(".toggle")
+    const menuDashboard = document.querySelector(".menu-dashboard")
+    const iconoMenu = toggle.querySelector("i")
+    const enlacesMenu = document.querySelectorAll(".enlace")
+
+    toggle.addEventListener("click", () => {
+        menuDashboard.classList.toggle("open")
+
+        if (iconoMenu.classList.contains("bx-menu")) {
+            iconoMenu.classList.replace("bx-menu", "bx-x")
+        } else {
+            iconoMenu.classList.replace("bx-x", "bx-menu")
+        }
+    })
+
+    enlacesMenu.forEach(enlace => {
+        enlace.addEventListener("click", () => {
+            menuDashboard.classList.add("open")
+            iconoMenu.classList.replace("bx-menu", "bx-x")
+        })
+    })
+
+</script>
+
+</html>
